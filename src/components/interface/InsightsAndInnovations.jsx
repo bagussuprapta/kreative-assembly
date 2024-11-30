@@ -35,7 +35,7 @@ function TabButtonCategory({ title }) {
 
 function InsightsAndInnovations() {
   return (
-    <div className="mb-96">
+    <div>
       <h2 className="mb-5 text-4xl">
         Insights and <br /> Innovations
       </h2>
