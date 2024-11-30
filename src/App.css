@@ -1,0 +1,11 @@
+@media (max-width: 1320px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1320px) {
+  .open-menu {
+    display: none;
+  }
+}
