@@ -17,7 +17,7 @@ function Navbar() {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
           setShowNavbar(true);
-        }, 2000);
+        }, 1000);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -53,7 +53,7 @@ function Navbar() {
                 <PopoverPanel
                   transition
                   anchor="bottom"
-                  className="divide-y w-36 mt-6 rounded-xl bg-bugbug-100 text-sm/6 transition duration-200 ease-in-out [--anchor-gap:var(--spacing-5)] data-[closed]:-translate-y-1 data-[closed]:opacity-0"
+                  className="divide-y z-50 w-36 mt-6 rounded-xl bg-bugbug-100 text-sm/6 transition duration-200 ease-in-out [--anchor-gap:var(--spacing-5)] data-[closed]:-translate-y-1 data-[closed]:opacity-0"
                 >
                   <div className="p-3 text-bugbug-600 text-center">
                     <a href="http://www.sample.com" className="block rounded-lg py-2 px-3 transition cursor-pointer hover:bg-bugbug-600 hover:text-bugbug-50">
