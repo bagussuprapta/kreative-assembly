@@ -1,6 +1,7 @@
 import { Navbar } from "../components/interface/Navbar";
 import { Hero } from "../components/interface/Hero";
 import { AboutUs } from "../components/interface/AboutUs";
+import { OurSolution } from '../components/interface/OurSolution';
 
 function LandingPage() {
   return (
@@ -11,6 +12,9 @@ function LandingPage() {
       </div>
       <div className="bg-white px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24 rounded-3xl">
         <AboutUs />
+      </div>
+      <div className="px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
+        <OurSolution />
       </div>
     </div>
   );
