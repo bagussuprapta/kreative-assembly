@@ -29,7 +29,9 @@ function Navbar() {
 
   return (
     <header
-      className={`bg-bugbug-400 fixed top-7 left-24 right-24 px-8 rounded-[16px] transition-all duration-500 ease-in-out ${showNavbar ? "translate-y-0 opacity-100" : "-translate-y-300px opacity-0"}`}
+      className={`bg-bugbug-400 fixed top-7 left-2 right-2 lg-left-24 lg-right-24 sm:left-12 sm:right-12 md:left-24 md:right-24 px-6 rounded-[16px] transition-all duration-500 ease-in-out ${
+        showNavbar ? "translate-y-0 opacity-100" : "-translate-y-300px opacity-0"
+      }`}
     >
       <nav>
         <ul className="flex flex-wrap justify-between items-center relative py-[20px] px-5">
