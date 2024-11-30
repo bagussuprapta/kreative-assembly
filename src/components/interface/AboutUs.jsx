@@ -1,6 +1,6 @@
 function AboutUs() {
   return (
-    <div className="mt-14 flex flex-col gap-y-5 md:flex md:flex-row md:gap-x-20 py-12">
+    <div className="mt-14 flex flex-col gap-y-5 py-12 md:flex md:flex-row md:gap-x-20 md:py-28">
       <div className="w-60 place-self-center md:w-1/2 xl:">
         <img className="rounded-3xl w-full" src="AboutUs.jpg" alt="" />
       </div>
