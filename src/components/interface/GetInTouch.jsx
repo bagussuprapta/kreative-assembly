@@ -41,13 +41,13 @@ function GetInTouch() {
   };
 
   return (
-    <div className=" mx-auto py-3 ">
-      <div className="flex flex-col gap-y-2">
+    <div className=" mx-auto py-3 md:flex md:gap-x-7">
+      <div className="flex flex-col gap-y-2 md:w-1/3 md:justify-between lg:w-1/2">
         <h2 className="mb-5 text-4xl">Get in Touch</h2>
         <p>Have questions or ready to learn more about how Bug Bug Consulting can transform your pest management? We're here to help.</p>
-        <img className="place-self-start ssm:w-2/3 sm:w-1/2" src="Certified.png" alt="" />
+        <img className="place-self-start ssm:w-2/3 sm:w-1/2 md:w-full" src="Certified.png" alt="" />
       </div>
-      <form onSubmit={handleSubmit} className="space-y-5 bg-bugbug-25 p-4 rounded-lg mt-5">
+      <form onSubmit={handleSubmit} className="space-y-5 bg-bugbug-25 p-4 rounded-lg mt-5 md:mt-0 md:w-2/3 lg:w-1/2">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">
             NAME
@@ -146,8 +146,8 @@ function GetInTouch() {
           <p className="text-xs mt-1 text-gray-500">Share details about your request, question, or feedback.</p>
         </div>
         <div>
-          <button type="submit" className="w-full bg-bugbug-600 text-white py-2 px-4 rounded-md hover:bg-bugbug-700 focus:outline-none focus:ring focus:ring-bugbug-150">
-            Submit
+          <button type="submit" className="w-full bg-bugbug-600 text-white py-3 px-5 rounded-md hover:bg-bugbug-700 focus:outline-none focus:ring focus:ring-bugbug-150">
+            SEND MESSAGE
           </button>
         </div>
       </form>
