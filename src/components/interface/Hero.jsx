@@ -7,8 +7,8 @@ function Hero() {
           Empowering <br /> Sustainable Growth <br /> Through Precision <br /> Insect Monitoring
         </h1>
         <div className="flex gap-x-3 place-self-center md:place-self-start">
-          <button className="px-7 py-4 bg-bugbug-400 text-bugbug-50 rounded-lg focus:outline-none">LEARN MORE</button>
-          <button className="px-7 py-4 border border-bugbug-400 text-bugbug-400 rounded-lg focus:outline-none">GET STARTED</button>
+          <button className="px-7 py-4 bg-bugbug-600 text-bugbug-50 rounded-lg focus:outline-none">LEARN MORE</button>
+          <button className="px-7 py-4 border border-bugbug-600 text-bugbug-600 rounded-lg focus:outline-none">GET STARTED</button>
         </div>
       </div>
       <div className="w-60 place-self-center md:w-1/3 xl:">

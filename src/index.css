@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 html {
-  @apply bg-bugbug-50 font-inclusivesans select-none antialiased;
+  @apply bg-bugbug-25 font-inclusivesans select-none antialiased;
 }
