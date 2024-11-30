@@ -29,7 +29,7 @@ function Navbar() {
 
   return (
     <header
-      className={`bg-bugbug-600 fixed left-2 right-2 top-2 sm:left-4 sm:right-4 sm:top-4 md:left-6 md:right-6 lg:left-8 lg:right-8 xl:left-24 xl:right-24 px-6 rounded-[16px] transition-all duration-500 ease-in-out ${
+      className={`bg-bugbug-600 fixed left-2 right-2 top-2 sm:left-4 sm:right-4 sm:top-4 md:left-6 md:right-6 lg:left-8 lg:right-8 xl:left-24 xl:right-24 px-6 rounded-[16px] transition-all duration-500 z-50 ease-in-out ${
         showNavbar ? "translate-y-0 opacity-100" : "-translate-y-300px opacity-0"
       }`}
     >
