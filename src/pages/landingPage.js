@@ -4,6 +4,7 @@ import { AboutUs } from "../components/interface/AboutUs";
 import { OurSolution } from "../components/interface/OurSolution";
 import { InsightsAndInnovations } from "../components/interface/InsightsAndInnovations";
 import { GetInTouch } from "../components/interface/GetInTouch";
+import { Footer } from '../components/interface/Footer';
 
 function LandingPage() {
   return (
@@ -23,6 +24,9 @@ function LandingPage() {
       </div>
       <div className="bg-bugbug-150 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
         <GetInTouch />
+      </div>
+      <div className="bg-bugbug-600 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
+        <Footer />
       </div>
     </div>
   );

@@ -41,7 +41,7 @@ function GetInTouch() {
   };
 
   return (
-    <div className=" mx-auto py-3 md:flex md:gap-x-7">
+    <div className=" mx-auto py-20 md:flex md:gap-x-7">
       <div className="flex flex-col gap-y-2 md:w-1/3 md:justify-between lg:w-1/2">
         <h2 className="mb-5 text-4xl">Get in Touch</h2>
         <p>Have questions or ready to learn more about how Bug Bug Consulting can transform your pest management? We're here to help.</p>
