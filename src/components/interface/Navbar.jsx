@@ -29,7 +29,7 @@ function Navbar() {
 
   return (
     <header
-      className={`bg-bugbug-400 fixed top-7 left-2 right-2 lg-left-24 lg-right-24 sm:left-12 sm:right-12 md:left-24 md:right-24 px-6 rounded-[16px] transition-all duration-500 ease-in-out ${
+      className={`bg-bugbug-400 fixed top-7 left-2 right-2 sm:left-4 sm:right-4 md:left-6 md:right-6 lg:left-8 lg:right-8 xl:left-24 xl:right-24 px-6 rounded-[16px] transition-all duration-500 ease-in-out ${
         showNavbar ? "translate-y-0 opacity-100" : "-translate-y-300px opacity-0"
       }`}
     >
@@ -38,7 +38,7 @@ function Navbar() {
           <button>
             <BugBugIcon />
           </button>
-          <span className="items-center font-light text-bugbug-50 menu flex [&>li]:pl-8 [&>li>a]:text-center [&>li>a]:relative [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out [&>li>a]:font-medium [&>li>a]:text-lg">
+          <span className="items-center text-sm font-light text-bugbug-50 menu flex [&>li]:pl-7">
             <li>
               <button>ABOUT US</button>
             </li>
@@ -79,7 +79,7 @@ function Navbar() {
               <button className="px-7 py-4 bg-bugbug-50 text-bugbug-400 rounded-lg focus:outline-none hover:bg-bugbug-100">CONTACT US</button>
             </li>
           </span>
-          <label className="open-menu">
+          <label className="xl:hidden">
             <HamburgerIcon />
           </label>
         </ul>
