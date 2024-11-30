@@ -18,6 +18,14 @@ module.exports = {
     fontFamily: {
       inclusivesans: ["Inclusive Sans", "sans-serif"],
     },
+    screens: {
+      ssm: "375px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      xxl: "1536px",
+    },
   },
   plugins: [],
 };
