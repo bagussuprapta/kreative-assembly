@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <div className="mt-32 flex flex-col gap-y-5 sm:flex sm:flex-row">
+    <div className="mt-32 flex flex-col gap-y-5 sm:flex sm:flex-row lg:mt-40">
       <div className=" flex flex-col gap-y-5 justify-between sm:w-2/3 md:w-2/3">
         <p className="text-base text-center text-gray-500 md:text-left md:text-lg xl:text-xl">AI-powered insect monitoring tools</p>
         <h1 className="text-4xl  md:text-5xl lg:text-6xl text-center md:text-left xl:text-7xl">
