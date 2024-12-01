@@ -2,6 +2,7 @@ import { Navbar } from "../components/interface/Navbar";
 import { Hero } from "../components/interface/Hero";
 import { AboutUs } from "../components/interface/AboutUs";
 import { OurSolution } from "../components/interface/OurSolution";
+import { WhyBugBug } from "../components/interface/WhyBugBug";
 import { Review } from "../components/interface/Review";
 import { InsightsAndInnovations } from "../components/interface/InsightsAndInnovations";
 import { GetInTouch } from "../components/interface/GetInTouch";
@@ -19,6 +20,9 @@ function LandingPage() {
       </div>
       <div className="px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
         <OurSolution />
+      </div>
+      <div className="bg-bugbug-150 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
+        <WhyBugBug />
       </div>
       <div className="px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
         <Review />
