@@ -3,14 +3,14 @@ import useEmblaCarousel from "embla-carousel-react";
 
 const Header = () => (
   <div>
-    <h2 className="text-center text-5xl">What Our Clients are Saying</h2>
+    <h2 className="text-center text-3xl">What Our Clients are Saying</h2>
   </div>
 );
 
-function Card() {
+function Card({ review, name, company }) {
   return (
-    <div className="flex-none w-full md:w-1/3 p-4">
-      <div className="bg-white rounded-lg p-6 flex flex-col gap-y-6">
+    <div className="flex-none w-full md:w-1/3 p-4 h-[380px] sm:h-[300px] md:h-[480px] lg:h-[400px] xl:h-[380px]">
+      <div className="bg-white rounded-lg p-6 flex flex-col justify-between gap-y-6 h-full">
         <div>
           <svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -19,13 +19,13 @@ function Card() {
             />
           </svg>
         </div>
-        <p>Bug Bug's AI solutions have transformed our pest management approach, reducing crop loss significantly. It’s technology that finally aligns with nature.</p>
+        <p>{review}</p>
         <div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <div class="border-t border-2 border-bugbug-150 flex-grow"></div>
-            <span class="px-4 text-center flex-grow">PHOEBE B.</span>
+            <span class="px-4 text-center sm:text-left flex-grow">{name}</span>
           </div>
-          <p>ORGANIC FARM OWNER</p>
+          <p>{company}</p>
         </div>
       </div>
     </div>
@@ -71,22 +71,47 @@ function Review() {
   }, [embla, checkScrollState]);
 
   return (
-    <div className="py-16">
+    <div>
       <Header />
-      <div className="flex items-center md:flex-row">
-        <button className={`left-0 z-10 ${!canScrollPrev ? "opacity-50 cursor-not-allowed" : ""}`} onClick={() => embla && embla.scrollPrev()} disabled={!canScrollPrev}>
+      <div className="flex items-center md:flex-row mt-4">
+        <button className={`hidden mr-4 lg:block z-10 ${!canScrollPrev ? "opacity-50 cursor-default" : ""}`} onClick={() => embla && embla.scrollPrev()} disabled={!canScrollPrev}>
           <PrevButton />
         </button>
         <div className="overflow-hidden w-full" ref={emblaRef}>
           <div className="flex">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <Card
+              review={"Bug Bug's AI solutions have transformed our pest management approach, reducing crop loss significantly. It’s technology that finally aligns with nature."}
+              name={"PHOEBE B."}
+              company={"ORGANIC FARM OWNER"}
+            />
+            <Card
+              review={"Since using Bug Bug’s monitoring tools, we’ve seen a noticeable improvement in yield and sustainability. Simple, precise, and eco-friendly."}
+              name={"CHAPPELL R."}
+              company={"AGRICULTURAL CONSULTANT"}
+            />
+            <Card
+              review={
+                "Bug Bug Consulting's focus on eco-modern design has been a game-changer for our operation. Their tools not only deliver results but do so in a way that respects the environment."
+              }
+              name={"HAYLEY W."}
+              company={"SUSTAINABLE AGRICULTURE ADVOCATE"}
+            />
+            <Card
+              review={"Since using Bug Bug’s monitoring tools, we’ve seen a noticeable improvement in yield and sustainability. Simple, precise, and eco-friendly."}
+              name={"CHAPPELL R."}
+              company={"AGRICULTURAL CONSULTANT"}
+            />
           </div>
         </div>
-        <button className={`right-0 z-10 ${!canScrollNext ? "opacity-50 cursor-not-allowed" : ""}`} onClick={() => embla && embla.scrollNext()} disabled={!canScrollNext}>
+        <button className={`hidden ml-4 lg:block z-10 ${!canScrollNext ? "opacity-50 cursor-default" : ""}`} onClick={() => embla && embla.scrollNext()} disabled={!canScrollNext}>
+          <NextButton />
+        </button>
+      </div>
+      <div className="flex justify-center gap-x-4 mt-4 lg:hidden">
+        <button className={`z-10 ${!canScrollPrev ? "opacity-50 cursor-default" : ""}`} onClick={() => embla && embla.scrollPrev()} disabled={!canScrollPrev}>
+          <PrevButton />
+        </button>
+        <button className={`z-10 ${!canScrollNext ? "opacity-50 cursor-default" : ""}`} onClick={() => embla && embla.scrollNext()} disabled={!canScrollNext}>
           <NextButton />
         </button>
       </div>
