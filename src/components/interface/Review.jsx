@@ -3,7 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 
 const Header = () => (
   <div>
-    <h2 className="text-center text-3xl">What Our Clients are Saying</h2>
+    <h2 className="text-center text-3xl lg:text-4xl xl:text-5xl">What Our Clients are Saying</h2>
   </div>
 );
 
