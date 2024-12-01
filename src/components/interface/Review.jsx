@@ -9,7 +9,7 @@ const Header = () => (
 
 function Card({ review, name, company }) {
   return (
-    <div className="flex-none w-full md:w-1/3 p-4 h-[380px] sm:h-[300px] md:h-[480px] lg:h-[400px] xl:h-[380px]">
+    <div className="flex-none w-full md:w-1/3 p-4 h-[380px] sm:h-[300px] md:h-[480px] lg:h-[430px] xl:h-[380px]">
       <div className="bg-white rounded-lg p-6 flex flex-col justify-between gap-y-6 h-full">
         <div>
           <svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
