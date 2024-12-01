@@ -12,29 +12,31 @@ function LandingPage() {
   return (
     <div>
       <Navbar />
-      <div className="px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
-        <Hero />
-      </div>
-      <div className="bg-white px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24 rounded-3xl">
-        <AboutUs />
-      </div>
-      <div className="px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
-        <OurSolution />
-      </div>
-      <div className="bg-bugbug-150 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
-        <WhyBugBug />
-      </div>
-      <div className="px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
-        <Review />
-      </div>
-      <div className="bg-white px-2 py-11 sm:px-4 md:px-6 lg:px-8 xl:px-24">
-        <InsightsAndInnovations />
-      </div>
-      <div className="bg-bugbug-150 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
-        <GetInTouch />
-      </div>
-      <div className="bg-bugbug-600 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
-        <Footer />
+      <div className='flex flex-col gap-y-12'>
+        <div className="px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
+          <Hero />
+        </div>
+        <div className="bg-white px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24 rounded-3xl">
+          <AboutUs />
+        </div>
+        <div className="px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
+          <OurSolution />
+        </div>
+        <div className="bg-bugbug-150 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
+          <WhyBugBug />
+        </div>
+        <div className="px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
+          <Review />
+        </div>
+        <div className="bg-white px-2 py-11 sm:px-4 md:px-6 lg:px-8 xl:px-24">
+          <InsightsAndInnovations />
+        </div>
+        <div className="bg-bugbug-150 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
+          <GetInTouch />
+        </div>
+        <div className="bg-bugbug-600 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-24">
+          <Footer />
+        </div>
       </div>
     </div>
   );
