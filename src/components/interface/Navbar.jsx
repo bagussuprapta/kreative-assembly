@@ -1,9 +1,55 @@
-import React, { useState, useEffect } from "react";
-import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import React, { useState, useEffect, Fragment } from "react";
+import { Popover, PopoverButton, PopoverPanel, Button, Dialog, DialogPanel, DialogTitle, Transition, Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 
 import { BugBugIcon } from "../icons/BugBugIcon";
 import { ArrowDownIcon } from "../icons/ArrowDownIcon";
 import { HamburgerIcon } from "../icons/HamburgerIcon";
+
+function PopoverMenuMobile() {
+  let [isOpen, setIsOpen] = useState(false);
+
+  function open() {
+    setIsOpen(true);
+  }
+
+  function close() {
+    setIsOpen(false);
+  }
+  return (
+    <>
+      <div onClick={open}>
+        <HamburgerIcon />
+      </div>
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-50" onClose={close}>
+          <div className="fixed inset-0 flex items-center justify-center">
+            <DialogPanel className="relative w-full h-full bg-bugbug-600 overflow-hidden">
+              <button onClick={close} className="absolute top-4 right-4 px-4 py-2 text-bugbug-25 bg-bugbug-700 rounded-full hover:bg-bugbug-800">
+                ✕
+              </button>
+              <div className="flex flex-col gap-y-5 items-center justify-center w-full h-full text-bugbug-150">
+                <a href="#">ABOUT US</a>
+                <Disclosure>
+                  <DisclosureButton>
+                    <p>SOLUTIONS</p>
+                  </DisclosureButton>
+                  <DisclosurePanel className={"flex flex-col gap-y-2 text-bugbug-100"}>
+                    <a href="#">SOLUTION 1</a>
+                    <a href="#">SOLUTION 2</a>
+                    <a href="#">SOLUTION 3</a>
+                  </DisclosurePanel>
+                </Disclosure>
+                <a href="#">GRANTS & COLLABORATIONS</a>
+                <a href="#">IN THE NEWS</a>
+                <button className="px-7 py-4 bg-bugbug-50 text-bugbug-600 rounded-lg focus:outline-none hover:bg-bugbug-100">CONTACT US</button>
+              </div>
+            </DialogPanel>
+          </div>
+        </Dialog>
+      </Transition>
+    </>
+  );
+}
 
 function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -79,9 +125,9 @@ function Navbar() {
               <button className="px-7 py-4 bg-bugbug-50 text-bugbug-600 rounded-lg focus:outline-none hover:bg-bugbug-100">CONTACT US</button>
             </li>
           </span>
-          <label className="xl:hidden">
-            <HamburgerIcon />
-          </label>
+          <div className="xl:hidden cursor-pointer">
+            <PopoverMenuMobile />
+          </div>
         </ul>
       </nav>
     </header>
