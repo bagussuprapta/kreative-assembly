@@ -1,8 +1,8 @@
 function WhyBugBug() {
   return (
-    <div className="flex flex-col py-8 gap-y-5 md:flex md:flex-row md:gap-x-20 md:py-20">
+    <div className="flex flex-col py-8 gap-y-5 md:flex md:flex-row md:gap-x-20 md:py-20 lg:py-32">
       <div className="w-full place-self-center md:w-1/2">
-        <img className="rounded-3xl w-full h-64 object-cover" src="Bee.jpg" alt="" />
+        <img className="rounded-3xl w-full h-64 object-cover md:h-96" src="Bee.jpg" alt="" />
       </div>
       <div className=" flex flex-col gap-y-5 md:w-1/2 justify-between">
         <h2 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl xl:leading-tight text-center md:text-left">Why Choose Bug Bug?</h2>
