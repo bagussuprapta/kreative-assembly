@@ -97,6 +97,9 @@ function InsightsAndInnovations() {
           </TabPanel>
         </TabPanels>
       </TabGroup>
+      <div className="flex justify-center mt-10">
+        <button className="px-5 py-3 text-sm bg-bugbug-600 text-bugbug-50 rounded-lg focus:outline-none lg:px-7 lg:py-4">VISIT OUR BLOG</button>
+      </div>
     </div>
   );
 }
