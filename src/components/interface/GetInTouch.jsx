@@ -29,6 +29,11 @@ function GetInTouch() {
     message: "",
   });
 
+  const handleSubjectChange = (selectedOption) => {
+    setSelected(selectedOption);
+    setFormData({ ...formData, subject: selectedOption?.name || "" });
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -41,11 +46,13 @@ function GetInTouch() {
   };
 
   return (
-    <div className=" mx-auto py-20 md:flex md:gap-x-7">
+    <div className=" mx-auto py-10 md:flex md:gap-x-7 lg:gap-x-16">
       <div className="flex flex-col gap-y-2 md:w-1/3 md:justify-between lg:w-1/2">
-        <h2 className="mb-5 text-4xl">Get in Touch</h2>
-        <p>Have questions or ready to learn more about how Bug Bug Consulting can transform your pest management? We're here to help.</p>
-        <img className="place-self-start ssm:w-2/3 sm:w-1/2 md:w-full" src="Certified.png" alt="" />
+        <div>
+          <h2 className="mb-5 text-3xl lg:text-4xl xl:text-5xl text-center md:text-left">Get in Touch</h2>
+          <p className="text-center px-3 md:text-left md:px-0">Have questions or ready to learn more about how Bug Bug Consulting can transform your pest management? We're here to help.</p>
+        </div>
+        <img className="place-self-center ssm:w-2/3 sm:w-1/2 md:w-full md:place-self-start lg:w-3/4" src="Certified.png" alt="" />
       </div>
       <form onSubmit={handleSubmit} className="space-y-5 bg-bugbug-25 p-4 rounded-lg mt-5 md:mt-0 md:w-2/3 lg:w-1/2">
         <div>
@@ -98,7 +105,7 @@ function GetInTouch() {
             SUBJECT
           </label>
           <div className="mx-auto mt-1">
-            <Combobox value={selected} onChange={(value) => setSelected(value)} onClose={() => setQuery("")}>
+            <Combobox value={selected} onChange={handleSubjectChange} onClose={() => setQuery("")}>
               <div className="relative">
                 <ComboboxInput
                   className={clsx("w-full rounded-lg border bg-white border-gray-400 pr-8 pl-3 py-2 px-4", "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2")}
@@ -140,6 +147,9 @@ function GetInTouch() {
                 className={clsx("block w-full resize-none rounded-lg border border-gray-400 py-1.5 px-3", "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2")}
                 rows={4}
                 placeholder="Type your message here..."
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
               />
             </Field>
           </div>
