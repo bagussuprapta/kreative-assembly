@@ -7,7 +7,7 @@ function OurSolution() {
           Bringing precision, simplicity, and sustainability to pest management with advanced AI and eco-friendly design principles for a healthier planet and productive crops.
         </p>
         <div className="flex gap-x-3 place-self-center md:place-self-start">
-          <button className="px-5 py-3 text-sm bg-bugbug-600 text-bugbug-50 rounded-lg focus:outline-none">DISCOVER OUR SOLUTIONS</button>
+          <button className="px-5 py-3 text-sm bg-bugbug-600 text-bugbug-50 rounded-lg focus:outline-none lg:px-7 lg:py-4">DISCOVER OUR SOLUTIONS</button>
         </div>
       </div>
       <div className="flex flex-col gap-y-4 md:gap-y-4 md:w-2/3 lg:w-1/2">
